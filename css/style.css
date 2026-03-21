@@ -1,0 +1,354 @@
+/* ==========================================================================
+   CSS Variables (Theme)
+   ========================================================================== */
+:root {
+  /* Colors */
+  --bg-color: #0d0d14; /* Deep dark background */
+  --text-main: #f8f8fb;
+  --text-muted: #8e92a4;
+  
+  /* Neon Accents */
+  --neon-cyan: #0ff;
+  --neon-magenta: #f0f;
+  --neon-lime: #39ff14;
+  --neon-gold: #ffd700;
+  
+  /* Primary Theme Accent */
+  --primary-glow: rgba(0, 255, 255, 0.4);
+  --primary-neon: var(--neon-cyan);
+  
+  /* Typography */
+  --font-main: 'Outfit', 'Inter', system-ui, sans-serif;
+}
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: var(--font-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  position: relative;
+  
+  /* Background grid for subtle tech/neon feel */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Add a dark gradient overlay */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: radial-gradient(circle at 50% 50%, transparent 20%, var(--bg-color) 90%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ==========================================================================
+   Header & Language Switcher
+   ========================================================================== */
+header {
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  opacity: 0; /* Hidden initially for morphing */
+  transform: translateY(-20px);
+  z-index: 10;
+}
+
+.lang-switcher {
+  display: flex;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.lang-btn:hover {
+  color: var(--text-main);
+}
+
+.lang-btn.active {
+  color: var(--primary-neon);
+  text-shadow: 0 0 8px var(--primary-glow);
+}
+
+.lang-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--primary-neon);
+  box-shadow: 0 0 5px var(--primary-neon);
+}
+
+/* ==========================================================================
+   Main Hero Section
+   ========================================================================== */
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Initial state for morphing */
+.hero > * {
+  opacity: 0;
+  transform: scale(0.95);
+  filter: blur(10px);
+}
+
+.logo-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+  margin-bottom: 1rem;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #fff;
+  text-shadow: 
+    0 0 10px rgba(0, 255, 255, 0.3),
+    0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.hero p.subtitle {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  max-width: 80%;
+  line-height: 1.5;
+}
+
+/* CTA Button */
+.cta-container {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #25D366; /* WhatsApp official color */
+  color: #111;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: 
+    0 0 15px rgba(37, 211, 102, 0.4),
+    0 0 30px rgba(37, 211, 102, 0.2);
+  z-index: 1;
+}
+
+/* Pulsing aura behind button */
+.whatsapp-btn::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px; right: -2px; bottom: -2px;
+  background: #25D366;
+  border-radius: 50px;
+  z-index: -1;
+  opacity: 0.5;
+  filter: blur(8px);
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 0 25px rgba(37, 211, 102, 0.6),
+    0 0 50px rgba(37, 211, 102, 0.3);
+  color: #000;
+}
+
+/* Active pentru Mobil (Feedback când pui degetul pe el) */
+.whatsapp-btn:active {
+  transform: translateY(1px) scale(0.98); /* Butonul se "scufundă" ușor */
+  box-shadow: 0 0 10px rgba(37, 211, 102, 0.4);
+  background-color: #20b858; /* Se închide puțin la culoare la apăsare */
+}
+
+.whatsapp-btn svg {
+  fill: currentColor;
+  width: 28px;
+  height: 28px;
+}
+
+.schedule {
+  font-size: 0.9rem;
+  color: var(--neon-cyan);
+  background: rgba(0, 255, 255, 0.05);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  opacity: 0; /* For morphing */
+  transform: translateY(20px);
+}
+
+/* ==========================================================================
+   Morphing Intro Animations
+   ========================================================================== */
+/* Triggered when body gets .loaded class */
+
+/*Language selector*/
+body.loaded header {
+  animation: slideDownFade 0.8s ease-out forwards;
+  animation-delay: 1.2s;
+}
+/*Logo*/
+body.loaded .logo-container {
+  animation: morphReveal 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+}
+/*Royal Food Delivery*/
+body.loaded .hero h1 {
+  animation: morphReveal 3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
+}
+/*Comandă rapid și simplu, direct pe WhatsApp.*/
+body.loaded .hero p.subtitle {
+  animation: morphReveal 5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.6s;
+}
+/*Buton whatsapp*/
+body.loaded .cta-container {
+  animation: morphReveal 7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.8s;
+}
+/*programul*/
+body.loaded .schedule {
+  animation: morphReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 1.0s;
+}
+
+body.loaded footer {
+  animation: slideUpFade 10s ease-out forwards;
+  animation-delay: 1.4s;
+}
+
+@keyframes morphReveal {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes slideDownFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero p.subtitle {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+  
+  .whatsapp-btn {
+    font-size: 1.1rem;
+    padding: 0.85rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 1.5rem 1rem;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+}

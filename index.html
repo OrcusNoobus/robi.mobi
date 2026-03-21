@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Food Delivery | Comandă pe WhatsApp</title>
+    
+    <!-- SEO & Social Meta Tags -->
+    <meta name="description" content="Comandă mâncare rapid și simplu de la Royal Food Delivery direct pe WhatsApp.">
+    <meta property="og:title" content="Royal Food Delivery | robi.mobi">
+    <meta property="og:description" content="Comandă mâncare rapid și simplu de la Royal Food Delivery direct pe WhatsApp.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://robi.mobi">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS & JS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script  src="js/i18n.js"></script>
+    <script  src="js/app.js"></script>
+</head>
+<!-- 
+     Body doesn't have .loaded class initially. 
+     The JS will append .loaded after a short timeout to trigger morphing animations. 
+-->
+<body>
+
+    <!-- Language Switcher -->
+    <header>
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="ro">RO</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="hu">HU</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <!-- Logo (To be generated / replaced) -->
+            <div class="logo-container">
+                <img src="assets/images/Asset 1@3x.png" alt="Royal Food Delivery Logo" width="100" height="100" style="border-radius:50%; object-fit:cover;">
+            </div>
+
+            <!-- Title & Subtitle -->
+            <h1 data-i18n="title">Royal Food Delivery</h1>
+            <p class="subtitle" data-i18n="subtitle">Comandă rapid și simplu, direct pe WhatsApp.</p>
+
+            <!-- WhatsApp CTA 
+                 (The 'wa.me/NUMAR' link will be replaced later by the admin) -->
+            <div class="cta-container">
+                <a href="https://wa.me/message/OIDTMQHEX6M4I1" class="whatsapp-btn" id="cta-btn" target="_blank" rel="noopener noreferrer">
+                    <svg xmlns="http://www.03.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M11.944 0C5.352 0 0 5.352 0 11.944c0 2.124.551 4.167 1.597 5.961L.114 23.361l5.589-1.465c1.724.965 3.66 1.472 5.679 1.472 6.592 0 11.944-5.352 11.944-11.944S18.536 0 11.944 0zm0 21.365c-1.802 0-3.568-.485-5.118-1.405l-.367-.218-3.804.997.999-3.708-.239-.379c-.989-1.564-1.511-3.385-1.511-5.26 0-5.419 4.41-9.829 9.829-9.829 5.419 0 9.829 4.41 9.829 9.829s-4.41 9.829-9.829 9.829zm5.394-7.373c-.296-.148-1.751-.864-2.023-.962-.272-.099-.47-.148-.668.148-.198.297-.766.963-.939 1.16-.173.197-.346.222-.642.074-2.126-1.062-3.694-2.585-4.524-3.993-.169-.286-.013-.435.132-.58.129-.129.296-.346.444-.519.148-.173.198-.297.296-.494.099-.198.05-.371-.025-.519-.074-.148-.668-1.605-.914-2.198-.242-.582-.489-.504-.668-.513-.173-.008-.371-.008-.568-.008-.198 0-.519.074-.791.371-.272.296-1.038 1.012-1.038 2.469 0 1.457 1.062 2.865 1.21 3.062.148.197 2.08 3.176 5.042 4.453 1.949.839 2.508.835 3.064.698.814-.2 1.751-.715 1.998-1.405.247-.69.247-1.282.173-1.405-.074-.123-.272-.197-.568-.345z"/>
+                    </svg>
+                    <span data-i18n="cta">Comandă pe WhatsApp</span>
+                </a>
+            </div>
+
+            <!-- Schedule -->
+            <p class="schedule" data-i18n="schedule">Program: 11:00 – 22:30</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer data-i18n="footer">
+        &copy; 2026 Royal Food Delivery. Toate drepturile rezervate.
+    </footer>
+
+</body>
+</html>
