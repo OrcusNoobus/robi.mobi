@@ -79,12 +79,12 @@ If a task cannot be traced to a requirement, it probably should not exist.
 
 ## Phase 3 — Language Consistency
 
-- [ ] **T21: Align title text across languages** — Update EN title to `"Robi 🤖 helps you order fast"` and HU title to `"Robi 🤖 segít gyorsan rendelni"` in i18n.js. Keep RO as-is.
+- [x] **T21: Align title text across languages** — Update EN title to `"Robi 🤖 helps you order fast"` and HU title to `"Robi 🤖 segít gyorsan rendelni"` in i18n.js. Keep RO as-is.
   - Trace: spec FR-8, AC Language consistency
   - File: `js/i18n.js`
   - Verify: switch to EN — title shows Robi 🤖 style, not just "Royal Food Delivery"
 
-- [ ] **T22: Verify all i18n strings for meaning parity** — Audit every key in translations object. Confirm all three languages convey equivalent meaning. Fix any discrepancies.
+- [x] **T22: Verify all i18n strings for meaning parity** — Audit every key in translations object. Confirm all three languages convey equivalent meaning. Fix any discrepancies.
   - Trace: spec FR-8, AC Language consistency
   - File: `js/i18n.js`
   - Verify: side-by-side comparison of all strings shows consistent messaging

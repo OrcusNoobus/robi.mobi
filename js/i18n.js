@@ -17,7 +17,7 @@ const translations = {
         "meta_description": "Comandă mâncare rapid și simplu de la Royal Food Delivery direct pe WhatsApp."
     },
     en: {
-        "title": "Royal Food Delivery",
+        "title": "Robi 🤖 helps you order fast",
         "subtitle1": [
             "No calls, No waiting",
             "Fast and easy ordering directly on WhatsApp"
@@ -34,7 +34,7 @@ const translations = {
         "meta_description": "Order food fast and easy from Royal Food Delivery directly on WhatsApp."
     },
     hu: {
-        "title": "Royal Food Delivery",
+        "title": "Robi 🤖 segít gyorsan rendelni",
         "subtitle1": [
             "Nincs hívás, nincs várakozás",
             "Gyors és egyszerű rendelés közvetlenül WhatsAppon"
