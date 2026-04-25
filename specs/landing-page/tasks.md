@@ -55,7 +55,7 @@ If a task cannot be traced to a requirement, it probably should not exist.
   - File: `js/i18n.js`
   - Verify: `translations.ro.subtitle1` is an array of length 2
 
-- [ ] **T17: Add subtitle1 rotation logic to app.js** — Add `startSubtitle1Loop(lang)` mirroring subtitle2 loop. Call from `applyLanguage()`. Skip `subtitle1` key in generic i18n element loop (now an array).
+- [x] **T17: Add subtitle1 rotation logic to app.js** — Add `startSubtitle1Loop(lang)` mirroring subtitle2 loop. Call from `applyLanguage()`. Skip `subtitle1` key in generic i18n element loop (now an array).
   - Trace: spec FR-6, AC Rotating subtitle1
   - File: `js/app.js`
   - Verify: subtitle1 text changes automatically on a timer
