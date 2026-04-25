@@ -91,17 +91,17 @@ If a task cannot be traced to a requirement, it probably should not exist.
 
 ## Phase 4 — WhatsApp Button Polish
 
-- [ ] **T23: Increase CTA animation delay** — Change `.cta-container` animation delay from `0.8s` to `1.2s` for a more polished entrance timing.
+- [x] **T23: Increase CTA animation delay** — Change `.cta-container` animation delay from `0.8s` to `1.2s` for a more polished entrance timing.
   - Trace: spec AC WhatsApp CTA "polished delay"
   - File: `css/style.css`
   - Verify: button appears noticeably later, feels more natural
 
-- [ ] **T24: Use official WhatsApp green tone** — Change `.whatsapp-btn::before` background from `var(--neon-lime)` to `#25D366`. Reduce glow intensity (blur: 6px, opacity: 0.35). Soften box-shadow spread.
+- [x] **T24: Use official WhatsApp green tone** — Change `.whatsapp-btn::before` background from `var(--neon-lime)` to `#25D366`. Reduce glow intensity (blur: 6px, opacity: 0.35). Soften box-shadow spread.
   - Trace: spec AC WhatsApp CTA "official WhatsApp green"
   - File: `css/style.css`
   - Verify: button glow looks clean and official, not neon-aggressive
 
-- [ ] **T25: Verify neon-lime still visible** — After removing lime from CTA glow, confirm `--neon-lime` is still visibly used on the page (currently on `.whatsapp-btn:focus-visible`). If not sufficiently visible, add lime accent to another element.
+- [x] **T25: Verify neon-lime still visible** — After removing lime from CTA glow, confirm `--neon-lime` is still visibly used on the page (currently on `.whatsapp-btn:focus-visible`). If not sufficiently visible, add lime accent to another element.
   - Trace: spec AC Visual "all four colors must be visibly used"
   - File: `css/style.css`
   - Verify: all four neon colors (cyan, magenta, lime, gold) confirmed visible

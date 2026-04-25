@@ -233,8 +233,8 @@ main {
   position: relative;
   transition: all 0.3s ease;
   box-shadow:
-    0 0 15px rgba(37, 211, 102, 0.4),
-    0 0 30px rgba(37, 211, 102, 0.2);
+    0 0 10px rgba(37, 211, 102, 0.3),
+    0 0 20px rgba(37, 211, 102, 0.15);
   z-index: 1;
 }
 
@@ -242,11 +242,11 @@ main {
   content: '';
   position: absolute;
   top: -2px; left: -2px; right: -2px; bottom: -2px;
-  background: var(--neon-lime); /* lime */
+  background: #25D366; /* official whatsapp green */
   border-radius: 50px;
   z-index: -1;
-  opacity: 0.5;
-  filter: blur(8px);
+  opacity: 0.35;
+  filter: blur(6px);
   animation: pulse 1s infinite alternate;
 }
 
@@ -258,8 +258,8 @@ main {
 .whatsapp-btn:hover {
   transform: translateY(-3px) scale(1.02);
   box-shadow:
-    0 0 25px rgba(37, 211, 102, 0.6),
-    0 0 50px rgba(37, 211, 102, 0.3);
+    0 0 20px rgba(37, 211, 102, 0.5),
+    0 0 40px rgba(37, 211, 102, 0.2);
   color: #000;
 }
 
@@ -301,6 +301,7 @@ footer {
   font-size: 0.85rem;
   opacity: 0;
   transform: translateY(20px);
+  border-top: 1px solid rgba(57, 255, 20, 0.15); /* subtle lime accent */
 }
 
 /* ==========================================================================
@@ -333,7 +334,7 @@ body.loaded .hero p.subtitle2 {
 
 body.loaded .cta-container {
   animation: morphReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.8s;
+  animation-delay: 1.2s;
 }
 
 body.loaded .schedule {
