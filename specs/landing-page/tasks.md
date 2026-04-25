@@ -60,7 +60,7 @@ If a task cannot be traced to a requirement, it probably should not exist.
   - File: `js/app.js`
   - Verify: subtitle1 text changes automatically on a timer
 
-- [ ] **T18: Add `id="subtitle1"` to HTML** — Add id attribute to `<p class="subtitle1">` for JS targeting. Add CSS transition support (reuse fade-out pattern).
+- [x] **T18: Add `id="subtitle1"` to HTML** — Add id attribute to `<p class="subtitle1">` for JS targeting. Add CSS transition support (reuse fade-out pattern).
   - Trace: spec AC Rotating subtitle1
   - Files: `index.html`, `css/style.css`
   - Verify: subtitle1 element is queryable by id, transitions apply
