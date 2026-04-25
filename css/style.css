@@ -183,7 +183,7 @@ main {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
-  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out, filter 1.2s ease-in-out;
+  transition: opacity 3s ease-in-out, transform 3s ease-in-out, filter 3s ease-in-out;
 }
 
 .hero p.subtitle1.fade-out {

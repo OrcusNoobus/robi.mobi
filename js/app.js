@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 subtitle1Index = (subtitle1Index + 1) % messages.length;
                 subtitle1El.textContent = messages[subtitle1Index];
                 subtitle1El.classList.remove('fade-out');
-            }, 1300);
-        }, 4000);
+            }, 2300);
+        }, 3000);
     }
 
     function startSubtitle2Loop(lang) {
