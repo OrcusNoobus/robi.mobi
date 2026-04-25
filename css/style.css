@@ -183,13 +183,13 @@ main {
   opacity: 1;
   transform: translateY(0);
   filter: blur(0);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), filter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out, filter 1.2s ease-in-out;
 }
 
 .hero p.subtitle1.fade-out {
   opacity: 0;
-  transform: translateY(-12px) scale(0.95);
-  filter: blur(6px);
+  transform: translateY(-8px);
+  filter: blur(4px);
 }
 
 .hero p.subtitle2 {
@@ -201,13 +201,13 @@ main {
   opacity: 0.95;
   transform: translateY(0);
   filter: blur(0);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1), filter 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out, filter 1.2s ease-in-out;
 }
 
 .hero p.subtitle2.fade-out {
   opacity: 0;
-  transform: translateY(-12px) scale(0.95);
-  filter: blur(6px);
+  transform: translateY(-8px);
+  filter: blur(4px);
 }
 
 /* CTA Button */
@@ -308,43 +308,43 @@ footer {
    Morphing Intro Animations
    ========================================================================== */
 body.loaded header {
-  animation: slideDownFade 0.8s ease-out forwards;
-  animation-delay: 0.7s;
-}
-
-body.loaded .logo-container {
-  animation: morphReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.1s;
-}
-
-body.loaded .hero h1 {
-  animation: morphReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.2s;
-}
-
-body.loaded .hero p.subtitle1 {
-  animation: morphReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.3s;
-}
-
-body.loaded .hero p.subtitle2 {
-  animation: morphReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.4s;
-}
-
-body.loaded .schedule {
-  animation: morphReveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: slideDownFade 0.6s ease-out forwards;
   animation-delay: 0.5s;
 }
 
+body.loaded .logo-container {
+  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0s;
+}
+
+body.loaded .hero h1 {
+  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.1s;
+}
+
+body.loaded .hero p.subtitle1 {
+  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+body.loaded .hero p.subtitle2 {
+  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.3s;
+}
+
+body.loaded .schedule {
+  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.4s;
+}
+
 body.loaded footer {
-  animation: slideUpFade 1s ease-out forwards;
+  animation: slideUpFade 0.6s ease-out forwards;
   animation-delay: 0.6s;
 }
 
 body.loaded .cta-container {
-  animation: morphReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.8s;
+  animation: morphReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 1.2s;
 }
 
 @keyframes morphReveal {
