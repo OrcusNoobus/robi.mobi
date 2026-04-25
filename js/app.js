@@ -36,12 +36,20 @@ document.addEventListener('DOMContentLoaded', () => {
         subtitle1El.textContent = messages[subtitle1Index];
 
         subtitle1Interval = setInterval(() => {
-            subtitle1El.classList.add('fade-out');
+            subtitle1El.classList.add('slide-out');
             setTimeout(() => {
                 subtitle1Index = (subtitle1Index + 1) % messages.length;
                 subtitle1El.textContent = messages[subtitle1Index];
-                subtitle1El.classList.remove('fade-out');
-            }, 2300);
+                
+                subtitle1El.classList.add('slide-in');
+                subtitle1El.classList.remove('slide-out');
+                
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        subtitle1El.classList.remove('slide-in');
+                    });
+                });
+            }, 600);
         }, 3000);
     }
 
@@ -58,12 +66,20 @@ document.addEventListener('DOMContentLoaded', () => {
         subtitle2El.textContent = messages[subtitle2Index];
 
         subtitle2Interval = setInterval(() => {
-            subtitle2El.classList.add('fade-out');
+            subtitle2El.classList.add('slide-out');
             setTimeout(() => {
                 subtitle2Index = (subtitle2Index + 1) % messages.length;
                 subtitle2El.textContent = messages[subtitle2Index];
-                subtitle2El.classList.remove('fade-out');
-            }, 1300);
+                
+                subtitle2El.classList.add('slide-in');
+                subtitle2El.classList.remove('slide-out');
+                
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(() => {
+                        subtitle2El.classList.remove('slide-in');
+                    });
+                });
+            }, 600);
         }, 4000);
     }
 

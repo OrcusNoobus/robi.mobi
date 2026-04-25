@@ -181,32 +181,46 @@ main {
   max-width: 100%;
   line-height: 1.5;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
   filter: blur(0);
-  transition: opacity 3s ease-in-out, transform 3s ease-in-out, filter 3s ease-in-out;
+  transition: opacity 600ms ease, transform 600ms ease, filter 600ms ease, text-shadow 600ms ease;
 }
 
-.hero p.subtitle1.fade-out {
+.hero p.subtitle1.slide-out {
   opacity: 0;
-  transform: translateY(-8px);
+  transform: translateX(40px);
+  filter: blur(4px);
+  text-shadow: -10px 0 15px var(--primary-glow);
+}
+
+.hero p.subtitle1.slide-in {
+  opacity: 0;
+  transform: translateX(-40px);
   filter: blur(4px);
 }
 
 .hero p.subtitle2 {
   font-size: 0.98rem;
-  color: var(--neon-gold);
+  color: var(--neon-cyan);
   max-width: 100%;
   line-height: 1.5;
   min-height: 2.2em;
   opacity: 0.95;
-  transform: translateY(0);
+  transform: translateX(0);
   filter: blur(0);
-  transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out, filter 1.2s ease-in-out;
+  transition: opacity 600ms ease, transform 600ms ease, filter 600ms ease, text-shadow 600ms ease;
 }
 
-.hero p.subtitle2.fade-out {
+.hero p.subtitle2.slide-out {
   opacity: 0;
-  transform: translateY(-8px);
+  transform: translateX(-40px);
+  filter: blur(4px);
+  text-shadow: 10px 0 15px var(--primary-glow);
+}
+
+.hero p.subtitle2.slide-in {
+  opacity: 0;
+  transform: translateX(40px);
   filter: blur(4px);
 }
 
@@ -248,6 +262,7 @@ main {
   opacity: 0.35;
   filter: blur(6px);
   animation: pulse 1s infinite alternate;
+  animation-delay: 3.6s;
 }
 
 @keyframes pulse {
@@ -318,33 +333,33 @@ body.loaded .logo-container {
 }
 
 body.loaded .hero h1 {
-  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.1s;
-}
-
-body.loaded .hero p.subtitle1 {
-  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: morphReveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
   animation-delay: 0.2s;
 }
 
+body.loaded .hero p.subtitle1 {
+  animation: morphReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.6s;
+}
+
 body.loaded .hero p.subtitle2 {
-  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.3s;
+  animation: morphReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.8s;
 }
 
 body.loaded .schedule {
-  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0.4s;
+  animation: morphReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 1.0s;
 }
 
 body.loaded footer {
   animation: slideUpFade 0.6s ease-out forwards;
-  animation-delay: 0.6s;
+  animation-delay: 1.2s;
 }
 
 body.loaded .cta-container {
-  animation: morphReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 1.2s;
+  animation: ctaSuspenseReveal 3.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation-delay: 0.4s;
 }
 
 @keyframes morphReveal {
@@ -358,6 +373,11 @@ body.loaded .cta-container {
     transform: scale(1) translateY(0);
     filter: blur(0);
   }
+}
+
+@keyframes ctaSuspenseReveal {
+  0% { opacity: 0; transform: scale(0.9) translateY(20px); filter: blur(10px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); filter: blur(0); }
 }
 
 @keyframes slideDownFade {
