@@ -67,7 +67,7 @@ If a task cannot be traced to a requirement, it probably should not exist.
 
 ## Phase 2 — Premium Text Transitions
 
-- [ ] **T19: Upgrade subtitle transition CSS** — Replace simple opacity fade with combined `opacity` + `translateY(-8px)` + `filter: blur(2px)` effect. Apply to both `.subtitle1` and `.subtitle2`. Use `cubic-bezier(0.4, 0, 0.2, 1)` easing at 0.5s duration.
+- [x] **T19: Upgrade subtitle transition CSS** — Replace simple opacity fade with combined `opacity` + `translateY(-8px)` + `filter: blur(2px)` effect. Apply to both `.subtitle1` and `.subtitle2`. Use `cubic-bezier(0.4, 0, 0.2, 1)` easing at 0.5s duration.
   - Trace: spec AC Text transition animations
   - File: `css/style.css`
   - Verify: visually confirm slide+fade+blur effect during rotation
