@@ -72,7 +72,7 @@ If a task cannot be traced to a requirement, it probably should not exist.
   - File: `css/style.css`
   - Verify: visually confirm slide+fade+blur effect during rotation
 
-- [ ] **T20: Update JS transition timing** — Change `setTimeout` delay from 400ms to 500ms in both subtitle loop functions to match new CSS duration.
+- [x] **T20: Update JS transition timing** — Change `setTimeout` delay from 400ms to 500ms in both subtitle loop functions to match new CSS duration.
   - Trace: spec AC Text transition animations
   - File: `js/app.js`
   - Verify: text swap happens at the exact end of fade-out, no flicker

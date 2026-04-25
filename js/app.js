@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 subtitle1Index = (subtitle1Index + 1) % messages.length;
                 subtitle1El.textContent = messages[subtitle1Index];
                 subtitle1El.classList.remove('fade-out');
-            }, 400);
+            }, 500);
         }, 3000);
     }
 
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 subtitle2Index = (subtitle2Index + 1) % messages.length;
                 subtitle2El.textContent = messages[subtitle2Index];
                 subtitle2El.classList.remove('fade-out');
-            }, 400);
+            }, 500);
         }, 3000);
     }
 
