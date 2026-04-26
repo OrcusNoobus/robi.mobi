@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
         subtitle1El.textContent = messages[subtitle1Index];
 
         subtitle1Interval = setInterval(() => {
+            subtitle1El.style.animation = 'none'; // clear the initial morphReveal animation lock
             subtitle1El.classList.add('slide-out');
             setTimeout(() => {
                 subtitle1Index = (subtitle1Index + 1) % messages.length;
@@ -49,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         subtitle1El.classList.remove('slide-in');
                     });
                 });
-            }, 600);
+            }, 800);
         }, 3000);
     }
 
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
         subtitle2El.textContent = messages[subtitle2Index];
 
         subtitle2Interval = setInterval(() => {
+            subtitle2El.style.animation = 'none'; // clear the initial morphReveal animation lock
             subtitle2El.classList.add('slide-out');
             setTimeout(() => {
                 subtitle2Index = (subtitle2Index + 1) % messages.length;
@@ -79,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         subtitle2El.classList.remove('slide-in');
                     });
                 });
-            }, 600);
+            }, 800);
         }, 4000);
     }
 
