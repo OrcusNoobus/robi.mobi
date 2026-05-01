@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(() => {
                 subtitle1El.classList.remove('slide-in');
             });
-        }, 600);
+        }, 1000);
 
         subtitle1Interval = setInterval(() => {
             subtitle1El.classList.add('slide-out');
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
             requestAnimationFrame(() => {
                 subtitle2El.classList.remove('slide-in');
             });
-        }, 800);
+        }, 1200);
 
         subtitle2Interval = setInterval(() => {
             subtitle2El.classList.add('slide-out');

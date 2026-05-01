@@ -145,8 +145,8 @@ main {
 }
 
 .logo-container {
-  width: 120px;
-  height: 120px;
+  width: 144px;
+  height: 144px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.05);
   display: flex;
@@ -175,9 +175,18 @@ main {
     0 0 20px rgba(0, 255, 255, 0.2);
 }
 
+.inline-emoji {
+  display: inline-block;
+  height: 1.1em;
+  width: auto;
+  vertical-align: middle;
+  margin: 0 0.15em;
+  border-radius: 4px;
+}
+
 .hero p.subtitle1 {
   font-size: 1rem;
-  color: #479eb4;
+  color: #979aaa;
   max-width: 100%;
   line-height: 1.5;
   opacity: 1;
@@ -203,7 +212,7 @@ main {
 
 .hero p.subtitle2 {
   font-size: 0.98rem;
-  color: #479eb4;
+  color: #979aaa;
   max-width: 100%;
   line-height: 1.5;
   min-height: 2.2em;
@@ -264,14 +273,14 @@ main {
   border-radius: 50px;
   z-index: -1;
   opacity: 0.35;
-  filter: blur(6px);
+  filter: blur(8px);
   animation: pulse 1s infinite alternate;
   animation-delay: 3.6s;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); opacity: 0.5; }
-  100% { transform: scale(1.05); opacity: 0.8; }
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.08); opacity: 0.95; }
 }
 
 .whatsapp-btn:hover {
@@ -332,7 +341,7 @@ body.loaded header {
 }
 
 body.loaded .logo-container {
-  animation: morphReveal 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: morphReveal 1.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: 0s;
 }
 
@@ -406,8 +415,8 @@ body.loaded .cta-container {
   }
 
   .logo-container {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     margin-bottom: 0.75rem;
   }
 
@@ -435,8 +444,8 @@ body.loaded .cta-container {
   }
 
   .logo-container {
-    width: 190px;
-    height: 190px;
+    width: 228px;
+    height: 228px;
     margin-bottom: 1rem;
   }
 
