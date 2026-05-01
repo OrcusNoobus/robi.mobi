@@ -175,14 +175,6 @@ main {
     0 0 20px rgba(0, 255, 255, 0.2);
 }
 
-.inline-emoji {
-  display: inline-block;
-  height: 1.1em;
-  width: auto;
-  vertical-align: middle;
-  margin: 0 0.15em;
-  border-radius: 4px;
-}
 
 .hero p.subtitle1 {
   font-size: 1rem;
@@ -274,8 +266,8 @@ main {
   z-index: -1;
   opacity: 0.35;
   filter: blur(8px);
-  animation: pulse 1s infinite alternate;
-  animation-delay: 3.6s;
+  animation: pulse 0.8s infinite alternate;
+  animation-delay: 0.3s;
 }
 
 @keyframes pulse {
@@ -341,8 +333,8 @@ body.loaded header {
 }
 
 body.loaded .logo-container {
-  animation: morphReveal 1.0s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 0s;
+  animation: morphReveal 2.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.5s;
 }
 
 body.loaded .hero h1 {
@@ -352,17 +344,17 @@ body.loaded .hero h1 {
 
 
 body.loaded .schedule {
-  animation: morphReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: morphReveal 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: 1.0s;
 }
 
 body.loaded footer {
-  animation: slideUpFade 0.6s ease-out forwards;
+  animation: slideUpFade 1s ease-out forwards;
   animation-delay: 1.2s;
 }
 
 body.loaded .cta-container {
-  animation: ctaSuspenseReveal 3.2s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+  animation: ctaSuspenseReveal 2.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
   animation-delay: 0.4s;
 }
 
