@@ -35,8 +35,15 @@ document.addEventListener('DOMContentLoaded', () => {
         subtitle1Index = 0;
         subtitle1El.textContent = messages[subtitle1Index];
 
+        // Initial slide-in to enter the view instead of morphReveal
+        subtitle1El.classList.add('slide-in');
+        setTimeout(() => {
+            requestAnimationFrame(() => {
+                subtitle1El.classList.remove('slide-in');
+            });
+        }, 600);
+
         subtitle1Interval = setInterval(() => {
-            subtitle1El.style.animation = 'none'; // clear the initial morphReveal animation lock
             subtitle1El.classList.add('slide-out');
             setTimeout(() => {
                 subtitle1Index = (subtitle1Index + 1) % messages.length;
@@ -66,8 +73,15 @@ document.addEventListener('DOMContentLoaded', () => {
         subtitle2Index = 0;
         subtitle2El.textContent = messages[subtitle2Index];
 
+        // Initial slide-in to enter the view instead of morphReveal
+        subtitle2El.classList.add('slide-in');
+        setTimeout(() => {
+            requestAnimationFrame(() => {
+                subtitle2El.classList.remove('slide-in');
+            });
+        }, 800);
+
         subtitle2Interval = setInterval(() => {
-            subtitle2El.style.animation = 'none'; // clear the initial morphReveal animation lock
             subtitle2El.classList.add('slide-out');
             setTimeout(() => {
                 subtitle2Index = (subtitle2Index + 1) % messages.length;

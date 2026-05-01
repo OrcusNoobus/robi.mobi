@@ -341,15 +341,6 @@ body.loaded .hero h1 {
   animation-delay: 0.2s;
 }
 
-body.loaded .hero p.subtitle1 {
-  animation: morphReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: 0.6s;
-}
-
-body.loaded .hero p.subtitle2 {
-  animation: morphReveal 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
-  animation-delay: 0.8s;
-}
 
 body.loaded .schedule {
   animation: morphReveal 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
